@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrl: './product-list.component.css'
 })
 export class ProductListComponent {
-
+  title:string = "Life"
 }
