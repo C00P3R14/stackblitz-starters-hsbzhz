@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class ProductListComponent {
   title:string = "Life"
-  message:string = "We are on page 110"
+  message:string = "We are on page 126 Accessing child component"
 
   onClick() {
   let par = document.createElement("p")
