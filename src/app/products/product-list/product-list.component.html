@@ -4,4 +4,11 @@
     <li (click)="selectedProduct = 'Microphone'">Microphone</li>
     <li (click)="selectedProduct = 'Wireless Keyboard'">Wireless Keyboard</li>
 </ul>
-<app-product-detail [name]="selectedProduct" (bought)="onBuy($event)"></app-product-detail>
+<!--identifiers prefixed with (#) are called template reference variables-->
+<!--local rerence approach is used when there is no control over the child component to add input or output binding properties-->
+<app-product-detail 
+#product
+[name]="selectedProduct" 
+(bought)="onBuy($event)"
+></app-product-detail>
+<span>{{product.name}}</span>
