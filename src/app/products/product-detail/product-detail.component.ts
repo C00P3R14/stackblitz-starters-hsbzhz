@@ -1,10 +1,10 @@
-import { Component,Input,Output, EventEmitter, ViewEncapsulation } from '@angular/core';
+import { Component,Input,Output, EventEmitter,ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
   selector: 'app-product-detail',
   templateUrl: './product-detail.component.html',
   styleUrl: './product-detail.component.css',
-  encapsulation: ViewEncapsulation.None //leaks CSS styles up to the component tree
+  changeDetection:ChangeDetectionStrategy.OnPush
 })
 export class ProductDetailComponent {
   @Input() name = ''
