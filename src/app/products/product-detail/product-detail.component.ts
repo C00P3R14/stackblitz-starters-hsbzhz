@@ -21,9 +21,12 @@ export class ProductDetailComponent implements OnChanges {
 
   ngOnChanges(changes: SimpleChanges): void {
     const product = changes['name'];
+    if(!product.isFirstChange())
+    {
     const oldValue = product.previousValue
     const newValue = product.currentValue
     console.log(`Product changed from ${oldValue} to ${newValue}`)
+  }
   }
 
 }
